@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.7",
   "modules": {
     "cache": {
       "base": {
@@ -14,11 +14,20 @@
       "gfx-webgl2": {
         "_value": true
       },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
       "3d": {
         "_value": false
       },
       "2d": {
         "_value": true
+      },
+      "xr": {
+        "_value": false
       },
       "ui": {
         "_value": true
@@ -53,7 +62,7 @@
         "_value": false
       },
       "intersection-2d": {
-        "_value": true
+        "_value": false
       },
       "primitive": {
         "_value": false
@@ -61,8 +70,17 @@
       "profiler": {
         "_value": true
       },
-      "particle-2d": {
+      "occlusion-query": {
         "_value": false
+      },
+      "geometry-renderer": {
+        "_value": false
+      },
+      "debug-renderer": {
+        "_value": false
+      },
+      "particle-2d": {
+        "_value": true
       },
       "audio": {
         "_value": true
@@ -83,26 +101,34 @@
         "_value": false
       },
       "spine": {
-        "_value": false
+        "_value": true
       },
       "dragon-bones": {
         "_value": false
       },
       "marionette": {
         "_value": false
+      },
+      "custom-pipeline": {
+        "_value": false
       }
     },
     "includeModules": [
+      "2d",
+      "animation",
+      "audio",
       "base",
       "gfx-webgl",
       "gfx-webgl2",
-      "2d",
-      "ui",
-      "intersection-2d",
+      "light-probe",
+      "particle-2d",
       "profiler",
-      "audio",
-      "webview",
-      "tween"
+      "skeletal-animation",
+      "spine",
+      "tween",
+      "ui",
+      "websocket",
+      "webview"
     ],
     "noDeprecatedFeatures": {
       "value": false,

@@ -1,5 +1,5 @@
 
-import { _decorator, Component, director, EventTouch, Node, Prefab, Sprite, SpriteFrame, UITransform, Vec3, Animation, instantiate, Label, TiledObjectGroup, tween, Game, Quat, Camera } from 'cc';
+import { _decorator, Component, director, EventTouch, Node, Prefab, Sprite, SpriteFrame, UITransform, Vec3, Animation, instantiate, Label, TiledObjectGroup, tween, Game, Quat, Camera, game, assetManager, Texture2D, ImageAsset, Vec2, Size, UI } from 'cc';
 import LogManager, { Logger } from '../helper/Logger';
 import UIUtils from '../utils/UIUtils';
 import PipeLogic from '../logic/PipeLogic';
@@ -101,10 +101,10 @@ export class SceneGame extends Component {
         this.imgGameOver.getComponent(Sprite).enabled = false;
         this.bird.getComponent(Animation).play("bird_flap");
         this.score = 0;
+
     }
 
     spawnPipe(): void{ 
-        this.logger.debug("Spawn Pipe");
         let pos = new Vec3(0, this.minPipeY + Math.random() * (this.maxPipeY - this.minPipeY), 0);
         let pipeUI = instantiate(this.pipe);
         pipeUI.setPosition(pos);
@@ -118,6 +118,15 @@ export class SceneGame extends Component {
         this.state = GameState.Playing;
         this.spawnPipe();
         this.nodeLabelScore.active = true;
+
+        //https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D&w=1000&q=80
+        // const link:string = "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D&w=1000&q=80";
+        // assetManager.loadRemote<ImageAsset>(link, {ext: '.png'}, (err, imageAsset) => {
+        //     this.imgBgScroll_1.getComponent(Sprite).spriteFrame = SpriteFrame.createWithImage(imageAsset);
+        //     this.imgBgScroll_1.getComponent(UITransform).setContentSize(new Size(288, 512));
+        //     assetManager.releaseAsset(imageAsset);
+        // });
+        // UIUtils.saveScreenShot("capture");
     }
 
     protected onLoad(): void {

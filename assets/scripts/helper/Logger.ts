@@ -54,7 +54,7 @@ export class Logger {
 export default class LogManager {
     static loggers: Map<string, Logger> = new Map();
     static log_level: LogLevel = LogLevel.Error;
-    public static globalLog: Logger = new Logger("Global Log");
+    private static globalLog: Logger = new Logger("Global Log");
     public static getLogger(moduleName: string) {
         let logger = this.loggers.get(moduleName);
         if (logger != null) return logger;
@@ -63,7 +63,9 @@ export default class LogManager {
         log("[LogManager] Created new Logger for " + moduleName);
         return logger;
     }
-
+    public static getGlobalLog(): Logger {
+        return this.globalLog;
+    }
     public static canLog(logLevel: LogLevel) {
         return this.log_level >= logLevel;
     }

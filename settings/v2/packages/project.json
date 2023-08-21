@@ -2,7 +2,24 @@
   "general": {
     "designResolution": {
       "width": 640,
-      "height": 960
+      "height": 1136
     }
+  },
+  "layer": [],
+  "__version__": "1.0.4",
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
+    }
+  },
+  "sorting-layer": {
+    "layers": [
+      {
+        "id": 1,
+        "name": "Sorting Layer 1",
+        "value": 0
+      }
+    ],
+    "increaseId": 4
   }
 }

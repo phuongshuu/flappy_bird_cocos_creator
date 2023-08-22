@@ -1,6 +1,6 @@
 
 import { _decorator, Component, director, EventTouch, Node, Prefab, Sprite, SpriteFrame, UITransform, Vec3, Animation, instantiate, Label, TiledObjectGroup, tween, Game, Quat, Camera, game, assetManager, Texture2D, ImageAsset, Vec2, Size, UI } from 'cc';
-import LogManager, { Logger } from '../helper/Logger';
+import LogManager, { Logger } from '../base/helper/Logger';
 import UIUtils from '../utils/UIUtils';
 import PipeLogic from '../logic/PipeLogic';
 import { AudioManager } from '../framework/AudioManager';

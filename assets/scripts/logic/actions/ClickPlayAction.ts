@@ -1,4 +1,4 @@
-import LogManager from "../../helper/Logger";
+import LogManager from "../../base/helper/Logger";
 import { ActionData } from "../GameControl";
 import BaseAction from "./BaseAction";
 

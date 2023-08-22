@@ -1,5 +1,5 @@
 import { _decorator, Enum, sys } from "cc";
-import LogManager, { Logger } from "../helper/Logger";
+import LogManager, { Logger } from "../base/helper/Logger";
 
 export enum UserDataType {
   LastPlayTime,

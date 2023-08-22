@@ -1,4 +1,4 @@
-import LogManager, { Logger } from "../helper/Logger";
+import LogManager, { Logger } from "../base/helper/Logger";
 
 export interface ActionData {
 

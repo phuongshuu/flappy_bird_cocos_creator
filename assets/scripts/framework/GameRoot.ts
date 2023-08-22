@@ -2,7 +2,7 @@
 import { _decorator, Component, AudioSource, assert, macro, director } from 'cc';
 import { AudioManager } from './AudioManager';
 import PlayerData from '../data/PlayerData';
-import LogManager, { Logger } from '../helper/Logger';
+import LogManager, { Logger } from '../base/helper/Logger';
 const { ccclass, property } = _decorator;
 
 declare const cocosAnalytics: any;

@@ -1,5 +1,5 @@
 import { Node, UITransform, Vec2, Vec3 } from "cc"
-import LogManager from "../helper/Logger";
+import LogManager from "../base/helper/Logger";
 
 
 export default class PipeLogic {

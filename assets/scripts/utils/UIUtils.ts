@@ -1,5 +1,5 @@
 import {EventTouch, Input, input, RenderTexture, native, director, Camera, Material } from "cc";
-import LogManager from "../helper/Logger";
+import LogManager from "../base/helper/Logger";
 
 export default class UIUtils {
     static logger = LogManager.getLogger(UIUtils.name);

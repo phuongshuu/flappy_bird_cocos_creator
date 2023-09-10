@@ -32,6 +32,6 @@ export class GameRoot extends Component {
             cocosAnalytics.enableDebug(true);
         }
         this.logger.debug("Start Game");
-        director.loadScene("Main");
+        director.loadScene("Fishing");
     }
 }

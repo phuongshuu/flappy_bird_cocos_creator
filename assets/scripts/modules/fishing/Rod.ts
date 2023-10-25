@@ -113,7 +113,7 @@ export class Rod extends Component {
         LogManager.getGlobalLog().debug("Pull done!");
         if (this._fish != null) {
             this._fish.node.removeFromParent();
-            director.getScene().getComponentInChildren(FishingMgr).spawnFish();
+            // director.getScene().getComponentInChildren(FishingMgr).spawnFish();
         }
         this._fish = null;
     }

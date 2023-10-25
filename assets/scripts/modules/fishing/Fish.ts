@@ -48,7 +48,7 @@ export class Fish extends Component {
     }
 
     update(deltaTime: number) {
-        this._state === FishState.SWIMMING && this.updateMove(deltaTime);
+        // this._state === FishState.SWIMMING && this.updateMove(deltaTime);
     }
     updateMove(deltaTime: number) {
         let newPos = new Vec3(this.node.position.x + this._velocityX * deltaTime, 

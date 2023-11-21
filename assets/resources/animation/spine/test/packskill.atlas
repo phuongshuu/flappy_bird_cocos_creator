@@ -1,0 +1,90 @@
+
+packskill.png
+size: 899,539
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fx_board/images_board/case/Comp 1_00_pack
+  rotate: true
+  xy: 653, 149
+  size: 175, 225
+  orig: 175, 225
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/Pack1
+  rotate: false
+  xy: 440, 292
+  size: 211, 245
+  orig: 211, 245
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/Pack2
+  rotate: true
+  xy: 653, 326
+  size: 211, 244
+  orig: 211, 244
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/Pack3
+  rotate: true
+  xy: 2, 2
+  size: 212, 244
+  orig: 212, 244
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/cricle_flare_2
+  rotate: false
+  xy: 506, 162
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/flare06_blue
+  rotate: false
+  xy: 182, 281
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/flare_00000_50
+  rotate: false
+  xy: 182, 229
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/hat1
+  rotate: false
+  xy: 766, 27
+  size: 121, 120
+  orig: 121, 120
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/icedecal02
+  rotate: false
+  xy: 248, 23
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/lightBeam_02
+  rotate: false
+  xy: 506, 32
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/nhom_hat_sang3
+  rotate: true
+  xy: 2, 216
+  size: 321, 178
+  orig: 321, 178
+  offset: 0, 0
+  index: -1
+fx_board/images_board/case/t-boom
+  rotate: false
+  xy: 636, 19
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

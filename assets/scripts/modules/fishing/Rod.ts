@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Node, NodeSpace, Quat, Size, UITransform, Vec3 } from 'cc';
+import { _decorator, BoxCollider2D, Component, director, Node, NodeSpace, Quat, RigidBody2D, Size, UITransform, Vec3 } from 'cc';
 import LogManager from '../../base/helper/Logger';
 import { Fish } from './Fish';
 import { FishingMgr } from './FishingMgr';

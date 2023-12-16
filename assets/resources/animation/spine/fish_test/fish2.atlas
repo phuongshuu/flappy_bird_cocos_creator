@@ -1,54 +1,54 @@
 
 fish2.png
-size: 274,158
+size: 164,246
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Vibrance 1
   rotate: false
-  xy: 2, 2
+  xy: 0, 92
   size: 164, 154
   orig: 167, 157
   offset: 1, 2
   index: -1
 Vibrance 1 copy
   rotate: true
-  xy: 223, 81
+  xy: 49, 4
   size: 34, 42
   orig: 36, 44
   offset: 1, 1
   index: -1
 Vibrance 1 copy 2
-  rotate: false
-  xy: 224, 37
+  rotate: true
+  xy: 91, 4
   size: 34, 42
   orig: 37, 44
   offset: 1, 1
   index: -1
 Vibrance 1 copy 3
-  rotate: true
-  xy: 224, 8
+  rotate: false
+  xy: 137, 55
   size: 27, 37
   orig: 29, 39
   offset: 1, 1
   index: -1
 Vibrance 1 copy 4
   rotate: false
-  xy: 223, 117
+  xy: 0, 0
   size: 49, 39
   orig: 52, 42
   offset: 1, 2
   index: -1
 Vibrance 1 copy 5
-  rotate: true
-  xy: 168, 17
+  rotate: false
+  xy: 79, 38
   size: 58, 54
   orig: 61, 56
   offset: 1, 1
   index: -1
 Vibrance 1 copy 6
-  rotate: false
-  xy: 168, 77
+  rotate: true
+  xy: 0, 39
   size: 53, 79
   orig: 55, 82
   offset: 1, 2

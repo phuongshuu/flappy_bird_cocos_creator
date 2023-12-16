@@ -1,8 +1,6 @@
 import { _decorator, Component, Node, UITransform, Vec3, view } from 'cc';
 import { Fish, FishState } from './Fish';
-import { SwimLine } from './SwimLine';
-import LogManager from '../../base/helper/Logger';
-const { ccclass, property } = _decorator;
+const { ccclass } = _decorator;
 
 @ccclass('FishMovement')
 export class FishMovement extends Component {

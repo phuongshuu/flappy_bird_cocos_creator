@@ -1,4 +1,4 @@
-import { _decorator, Canvas, Component, director, Node, RichText, UITransform, Vec2, Vec3, view } from 'cc';
+import { _decorator, Canvas, Component, director, Node, RichText, RigidBody2D, UITransform, Vec2, Vec3, view } from 'cc';
 import LogManager from '../../base/helper/Logger';
 import { FishMovement } from './FishMovement';
 const { ccclass, property } = _decorator;

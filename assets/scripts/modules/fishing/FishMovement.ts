@@ -12,13 +12,16 @@ export class FishMovement extends Component {
             this.node.position.y,
             0
         );
+        let scale = this.node.getScale();
+        scale.x = data.velocityX > 0 ? -1 : 1;
+        this.node.setScale(scale);
         let screenSize = view.getVisibleSize();
-        if (newPos.x > screenSize.width / 2 - this.node.getComponentInChildren(UITransform).width / 2 && data.velocityX > 0) {
-            newPos.x = screenSize.width / 2 - this.node.getComponentInChildren(UITransform).width / 2;
+        if (newPos.x > screenSize.width / 2 - this.node.getComponent(UITransform).width / 2 && data.velocityX > 0) {
+            newPos.x = screenSize.width / 2 - this.node.getComponent(UITransform).width / 2;
             data.velocityX *= -1;
         }
-        if (newPos.x <= -screenSize.width / 2 + this.node.getComponentInChildren(UITransform).width / 2 && data.velocityX < 0) {
-            newPos.x = -screenSize.width / 2 + this.node.getComponentInChildren(UITransform).width / 2;
+        if (newPos.x <= -screenSize.width / 2 + this.node.getComponent(UITransform).width / 2 && data.velocityX < 0) {
+            newPos.x = -screenSize.width / 2 + this.node.getComponent(UITransform).width / 2;
             data.velocityX *= -1;
         }
         this.node.setPosition(newPos);

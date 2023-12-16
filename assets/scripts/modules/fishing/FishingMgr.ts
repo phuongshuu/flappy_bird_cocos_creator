@@ -1,8 +1,9 @@
-import { _decorator, Button, Canvas, Component, director, EventTouch, instantiate, Node, PolygonCollider2D, Prefab, UITransform, Vec3, view } from 'cc';
+import { _decorator, Button, Canvas, Component, director, EventTouch, instantiate, log, Node, PolygonCollider2D, Prefab, UITransform, Vec3, view } from 'cc';
 import UIUtils from '../../utils/UIUtils';
 import { Rod, RodState } from './Rod';
 import LogManager, { Logger } from '../../base/helper/Logger';
 import { Fish, FishState } from './Fish';
+import { eMenu } from '../../../resources/import/easyMenu/src/eMenu';
 const { ccclass, property } = _decorator;
 
 @ccclass('FishingMgr')
@@ -18,6 +19,26 @@ export class FishingMgr extends Component {
 
     _logger: Logger = LogManager.getLogger(FishingMgr.name);
     _listFish: Array<Node>;
+    private _collidedFish: Fish;
+    public get collidedFish(): Fish {
+        return this._collidedFish;
+    }
+    public set collidedFish(value: Fish) {
+        this._collidedFish = value;
+    }
+
+    configMenu() {
+        this._logger.debug("Config Menu");
+        let menu = this.node.parent.getChildByName("Canvas").getComponentInChildren(eMenu);
+        if (!menu) {
+            this._logger.debug("Menu not found!");
+            return;
+        }
+        let group = menu.addGroup("God Mode");
+        group.addEdit("Weight", 1, ()=>{});
+        group.addEdit("Velocity", 10, ()=>{});
+        group.addItem("Spawn Fish", this.spawnFish.bind(this));
+    }
 
     spawnFish() {
         let fish = instantiate(this.fishPrefab);
@@ -32,29 +53,35 @@ export class FishingMgr extends Component {
     }
 
     start(): void {
+        this.rod.setListener({
+            onPullDone: ()=>{
+                this.collidedFish = null;
+            }
+        });
         this.rod.state = RodState.DANGLIN;
         this._listFish = [];
+        this.configMenu();
     }
     getCollidedFish(): Fish {
-        return null;
+        return this.collidedFish;
     }
 
     update(): void {
         if (this.rod.state !== RodState.CASTING) return;
-        let fish = this.getCollidedFish();
-        if (fish == null) return;
+        if (this.collidedFish == null) return;
 
-        fish.state = FishState.PULLING;
-        fish.node.removeFromParent();
-        this.rod.getHook().addChild(fish.node);
-        fish.node.setPosition(new Vec3(
+        this.collidedFish.state = FishState.PULLING;
+        this.collidedFish.node.removeFromParent();
+        this.rod.getHook().addChild(this.collidedFish.node);
+        this.collidedFish.node.setPosition(new Vec3(
             0, 
-            -this.rod.getHook().getComponent(UITransform).height / 2 - fish.node.getComponentInChildren(UITransform).height / 2)
+            -this.rod.getHook().getComponent(UITransform).height / 2 - this.collidedFish.node.getComponent(UITransform).height / 2)
             );
-        this.rod.fish = fish;
+        this.rod.fish = this.collidedFish;
         this.rod.state = RodState.PULLING;
     }
-    onTouchEnded(_event: EventTouch) {
+
+    onTouchStart(_event: EventTouch) {
         this.rod.state === RodState.DANGLIN && this.rod.cast();
     }
     //add touch

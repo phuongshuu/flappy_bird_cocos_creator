@@ -55,8 +55,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 0.25,
-      "y": 0.25,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_mobility": 0,
@@ -96,8 +96,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -20.291,
-      "y": -75.075,
+      "x": -4.518,
+      "y": -31.201,
       "z": 0
     },
     "_lrot": {
@@ -109,8 +109,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1.0000000136767002,
-      "y": 1.0000000156947835,
+      "x": 0.5,
+      "y": 0.5,
       "z": 1
     },
     "_mobility": 0,
@@ -125,7 +125,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Body",
+    "_name": "FishBody",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -219,7 +219,7 @@
     "enabledContactListener": false,
     "bullet": false,
     "awakeOnLoad": true,
-    "_group": 1,
+    "_group": 4,
     "_type": 3,
     "_allowSleep": true,
     "_gravityScale": 1,
@@ -431,7 +431,7 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.4224903511515332,
+      "x": 0.42249,
       "y": 0.16854920436668927
     },
     "_id": ""
@@ -519,7 +519,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 18
@@ -533,8 +533,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": 2.106,
+      "y": 7.502,
       "z": 0
     },
     "_lrot": {

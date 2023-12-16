@@ -27,5 +27,22 @@
   "script": {
     "preserveSymlinks": true
   },
-  "custom_joint_texture_layouts": []
+  "custom_joint_texture_layouts": [],
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "Hook"
+      },
+      {
+        "index": 2,
+        "name": "Fish"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 0,
+      "1": 4,
+      "2": 2
+    }
+  }
 }

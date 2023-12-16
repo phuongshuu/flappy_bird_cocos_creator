@@ -53,6 +53,11 @@ export class Rod extends Component {
     public set maxLineLength(value: number) {
         this._maxLineLength = value;
     }
+    _listener: any =  {};
+    setListener(lis) {
+        this._listener = lis;
+    }
+
     start() {
         this._danglingVelocity = DANGLING_VELOCITY;
         this._castingVelocity = 400;
@@ -113,6 +118,7 @@ export class Rod extends Component {
         LogManager.getGlobalLog().debug("Pull done!");
         if (this._fish != null) {
             this._fish.node.removeFromParent();
+            this._listener.onPullDone && this._listener.onPullDone();
             // director.getScene().getComponentInChildren(FishingMgr).spawnFish();
         }
         this._fish = null;

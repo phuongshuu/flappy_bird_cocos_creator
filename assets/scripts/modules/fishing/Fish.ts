@@ -43,7 +43,7 @@ export class Fish extends Component {
         LogManager.getGlobalLog().debug(
             "Fish " + this._fishId,
             "Weight: " + this._weight,
-            "VelocityX: " + this._velocityX
+            "Velocity X: " + this._velocityX
         )
         this.node.getComponentInChildren(RichText).string = "<color=#ff0000>@num kg</color>".replace("@num", this._weight.toFixed(2).toString());
     }
